@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CodingExperiencesComponent } from './coding-experiences/coding-experiences.component';
+import { DxChartModule, DxSelectBoxModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { CodingExperiencesComponent } from './coding-experiences/coding-experien
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DxChartModule,
+    DxSelectBoxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
