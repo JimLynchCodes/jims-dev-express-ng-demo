@@ -1,0 +1,51 @@
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar img {
+    margin: 0 16px;
+  }
+
+  .navbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .navbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .navbar #twitter-logo:hover,
+  .navbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .navbar-left-side {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-right-side {
+    display: flex;
+    align-items: center;
+    padding-right: 0.75rem;
+  }
+
+  .prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
