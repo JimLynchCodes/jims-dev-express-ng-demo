@@ -1,0 +1,30 @@
+<dx-chart
+    palette="violet"
+    [dataSource]="architecturesInfo"
+    title="Example of Pulling Data From API Call"
+    id="apiCallLineChart"
+  >
+    <dxi-series valueField="smp" name="SMP"></dxi-series>
+    <dxi-series valueField="mmp" name="MMP"></dxi-series>
+    <dxi-series valueField="cnstl" name="Cnstl"></dxi-series>
+    <dxi-series valueField="cluster" name="Cluster"></dxi-series>
+    <dxo-common-series-settings
+      #seriesSettings
+      argumentField="year"
+      [type]="types[0]"
+    >
+    </dxo-common-series-settings>
+    <dxo-margin [bottom]="20"></dxo-margin>
+    <dxo-common-axis-settings>
+      <dxo-grid [visible]="true"></dxo-grid>
+    </dxo-common-axis-settings>
+    <dxo-legend verticalAlignment="top" horizontalAlignment="right">
+    </dxo-legend>
+    <dxo-argument-axis [allowDecimals]="false" [axisDivisionFactor]="60">
+      <dxo-label>
+        <dxo-format type="decimal"></dxo-format>
+      </dxo-label>
+    </dxo-argument-axis>
+    <dxo-export [enabled]="true"></dxo-export>
+    <dxo-tooltip [enabled]="true"></dxo-tooltip>
+  </dx-chart>
