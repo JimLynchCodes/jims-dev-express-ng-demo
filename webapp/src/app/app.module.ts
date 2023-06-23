@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -9,6 +8,7 @@ import { DxChartModule, DxPieChartModule, DxSelectBoxModule } from 'devextreme-a
 import { GoodHiringDecisionDonutComponent } from './good-hiring-decision-donut/good-hiring-decision-donut.component';
 import { ApiCallLineChartComponent } from './api-call-line-chart/api-call-line-chart.component';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     CodingExperiencesComponent,
     GoodHiringDecisionDonutComponent,
-    ApiCallLineChartComponent
+    ApiCallLineChartComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

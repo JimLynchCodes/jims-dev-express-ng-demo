@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ApiCallLineChartComponent } from './api-call-line-chart.component';
 
 describe('ApiCallLineChartComponent', () => {

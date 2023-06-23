@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-import { DxChartModule, DxSelectBoxModule } from 'devextreme-angular';
-
 import { Population, CodingExperiencesDataService } from './coding-experiences-data.service';
-
 
 @Component({
   selector: 'coding-experiences',

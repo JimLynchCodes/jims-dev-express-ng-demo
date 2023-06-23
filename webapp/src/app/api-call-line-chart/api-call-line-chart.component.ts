@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ApiCallLineChartService, ArchitectureInfo } from './api-call-line-chart-data.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ApiCallLineChartService, PopulationData } from './api-call-line-chart-data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'api-call-line-chart',
@@ -12,65 +12,22 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ApiCallLineChartComponent {
   types: string[] = ['spline', 'stackedspline', 'fullstackedspline'];
 
-  architecturesInfo: ArchitectureInfo[];
+  populationData: PopulationData[];
 
   constructor(service: ApiCallLineChartService, private http: HttpClient) {
-    this.architecturesInfo = service.getArchitecturesInfo();
-
-    // const apiUrl = 'https://datausa.io/api/data?drilldowns=Nation&measures=Population';
-
-    // return this.http.get(url);
+    this.populationData = service.getPopulationData();
 
     service.getData().subscribe((response) => {
-      // Handle the response data
 
       const mappedResponse = response['data'].map((responseObj: any) => ({
         'year': parseInt(responseObj['Year']),
-        'smp': responseObj['Population']
+        'population': responseObj['Population']
       }))
 
-      this.architecturesInfo = mappedResponse
+      this.populationData = mappedResponse
 
-      console.log(response);
-    }, (error) => {
-      // Handle errors
-      console.error(error);
-    });
+    }, (error) => console.error(error));
 
   }
 
-
-  // const callbackParam = 'callback';
-
-  // service.makeJsonpGetCall(callbackParam).subscribe((response) => {
-  //   // Handle the response data
-
-  //   const mappedResponse = response['data'].map((responseObj: any) => ({
-  //     'year': parseInt(responseObj['Year']),
-  //     'smp': responseObj['Population']
-  //   }))
-
-  //   this.architecturesInfo = mappedResponse
-
-  //   console.log(response);
-  // }, (error) => {
-  //   // Handle errors
-  //   console.error(error);
-  // });
-
-
-  // service.getData().subscribe(
-  //   (response) => {
-  //     // Handle the API response (an array) here
-  //     // this.architecturesInfo = response;
-  //     console.log('got response');
-  //     console.log(response);
-  //   },
-  //   (error) => {
-  //     // Handle any errors that occurred during the API call
-  //     console.log('error');
-  //     console.error(error);
-  //   }
-  // );
-  // }
 }
