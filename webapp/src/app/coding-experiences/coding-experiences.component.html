@@ -1,31 +1,30 @@
 
 <div id="chart-demo">
     <dx-chart
-      title="Population: Age Structure (2018)"
+      title="Jim's Coding Experiences Over Time"
       palette="Harmony Light"
       [dataSource]="populationData"
     >
-      <!-- <dxi-series valueField="actionscript3" name="actionscript 3"></dxi-series> -->
-      <!-- <dxi-series valueField="javascript" name="javascript"></dxi-series> -->
-      <!-- <dxi-series valueField="cloudaws" name="cloud / aws"></dxi-series> -->
-      <dxi-series valueField="angular" name="Angular"></dxi-series>
-      <dxi-series valueField="tdd" name="TDD"></dxi-series>
-      <!-- <dxi-series valueField="rust" name="Rust"></dxi-series> -->
-      <!-- <dxi-series valueField="y014" name="0-14 years"></dxi-series> -->
-      <!-- <dxi-series valueField="y65" name="65 years and older"></dxi-series> -->
+      <dxi-series valueField="webDevelopment" name="Web Development"></dxi-series>
+      <dxi-series valueField="javascript" name="JavaScript / TypeScript"></dxi-series>
+      <dxi-series valueField="angular" name="Angular / AngularJS"></dxi-series>
+
       <dxo-common-series-settings
         #commonSeries
-        argumentField="programmingLanguage"
+        argumentField="year"
         [type]="types[0]"
+        title="Foo"
       >
       </dxo-common-series-settings>
       <dxo-margin [bottom]="20"></dxo-margin>
+      <dxi-value-axis title="Years of Experience"></dxi-value-axis>
+      <!-- <dxo-value-axis title="Ok"></dxo-value-axis> -->
       <dxo-argument-axis [valueMarginsEnabled]="false"></dxo-argument-axis>
       <dxo-export [enabled]="true"></dxo-export>
       <dxo-legend verticalAlignment="bottom" horizontalAlignment="center">
       </dxo-legend>
     </dx-chart>
-    <div class="options">
+    <!-- <div class="options">
       <div class="caption">Options</div>
       <div class="option">
         <span>Series Type</span>
@@ -36,5 +35,5 @@
         >
         </dx-select-box>
       </div>
-    </div>
+    </div> -->
   </div>
