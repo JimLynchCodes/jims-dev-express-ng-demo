@@ -8,7 +8,7 @@ import { CodingExperiencesComponent } from './coding-experiences/coding-experien
 import { DxChartModule, DxPieChartModule, DxSelectBoxModule } from 'devextreme-angular';
 import { GoodHiringDecisionDonutComponent } from './good-hiring-decision-donut/good-hiring-decision-donut.component';
 import { ApiCallLineChartComponent } from './api-call-line-chart/api-call-line-chart.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     DxChartModule,
     DxPieChartModule,
     DxSelectBoxModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
