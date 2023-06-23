@@ -14,13 +14,14 @@ export class ApiCallLineChartComponent {
 
   architecturesInfo: ArchitectureInfo[];
 
-  constructor(service: ApiCallLineChartService) {
+  constructor(service: ApiCallLineChartService, private http: HttpClient) {
     this.architecturesInfo = service.getArchitecturesInfo();
 
-    const apiUrl = 'https://datausa.io/api/data?drilldowns=Nation&measures=Population';
-    const callbackParam = 'callback';
+    // const apiUrl = 'https://datausa.io/api/data?drilldowns=Nation&measures=Population';
 
-    service.makeJsonpGetCall(callbackParam).subscribe((response) => {
+    // return this.http.get(url);
+
+    service.getData().subscribe((response) => {
       // Handle the response data
 
       const mappedResponse = response['data'].map((responseObj: any) => ({
@@ -36,19 +37,40 @@ export class ApiCallLineChartComponent {
       console.error(error);
     });
 
-
-    // service.getData().subscribe(
-    //   (response) => {
-    //     // Handle the API response (an array) here
-    //     // this.architecturesInfo = response;
-    //     console.log('got response');
-    //     console.log(response);
-    //   },
-    //   (error) => {
-    //     // Handle any errors that occurred during the API call
-    //     console.log('error');
-    //     console.error(error);
-    //   }
-    // );
   }
+
+
+  // const callbackParam = 'callback';
+
+  // service.makeJsonpGetCall(callbackParam).subscribe((response) => {
+  //   // Handle the response data
+
+  //   const mappedResponse = response['data'].map((responseObj: any) => ({
+  //     'year': parseInt(responseObj['Year']),
+  //     'smp': responseObj['Population']
+  //   }))
+
+  //   this.architecturesInfo = mappedResponse
+
+  //   console.log(response);
+  // }, (error) => {
+  //   // Handle errors
+  //   console.error(error);
+  // });
+
+
+  // service.getData().subscribe(
+  //   (response) => {
+  //     // Handle the API response (an array) here
+  //     // this.architecturesInfo = response;
+  //     console.log('got response');
+  //     console.log(response);
+  //   },
+  //   (error) => {
+  //     // Handle any errors that occurred during the API call
+  //     console.log('error');
+  //     console.error(error);
+  //   }
+  // );
+  // }
 }
