@@ -1,0 +1,12 @@
+<dx-pie-chart id="pie" type="doughnut" title="Hiring Jim Regret Forecast" palette="Soft Pastel"
+    [dataSource]="populationByRegions" >
+    <dxi-series argumentField="outcome">
+        <dxo-label [visible]="true" format="#0.0%">
+            <dxo-connector [visible]="true"></dxo-connector>
+        </dxo-label>
+    </dxi-series>
+    <dxo-export [enabled]="true"></dxo-export>
+    <dxo-legend [margin]="0" horizontalAlignment="center" verticalAlignment="center"></dxo-legend>
+    <dxo-tooltip [enabled]="true" [customizeTooltip]="customizeTooltip" format="#0.0%">
+    </dxo-tooltip>
+</dx-pie-chart>
