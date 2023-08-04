@@ -6,6 +6,7 @@
     "test": " ng test --browsers ChromeHeadless",
     "test:ui": "ng test",
     "test:focus": "ng test --browsers ChromeHeadless --include='**/footer.component.spec.ts'",
+    "test:mutation": "stryker run -m '**/coding-experiences.component.ts'",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
