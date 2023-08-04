@@ -12,7 +12,7 @@ const populationByRegions: PopulationByRegion[] = [{
   outcome: 'Chance of hiring Jim being a great decision!',
   val: .999,
 }, {
-  outcome: 'Chance of hiring Jim not be a good choice...',
+  outcome: 'Chance of hiring Jim not being a good choice...',
   val: 0.001,
 }];
 

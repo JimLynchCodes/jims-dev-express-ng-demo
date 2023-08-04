@@ -53,7 +53,7 @@ const populationByRegions: PopulationByRegion[] = stryMutAct_9fa48("56") ? [] : 
   outcome: stryMutAct_9fa48("58") ? "" : (stryCov_9fa48("58"), 'Chance of hiring Jim being a great decision!'),
   val: .9999
 }), stryMutAct_9fa48("59") ? {} : (stryCov_9fa48("59"), {
-  outcome: stryMutAct_9fa48("60") ? "" : (stryCov_9fa48("60"), 'Chance of hiring Jim not be a good choice...'),
+  outcome: stryMutAct_9fa48("60") ? "" : (stryCov_9fa48("60"), 'Chance of hiring Jim not being a good choice...'),
   val: 0.0001
 })]);
 @Injectable()
