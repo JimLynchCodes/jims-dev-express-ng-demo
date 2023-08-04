@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CodingExperiencesComponent } from './coding-experiences.component';
+import { populationData } from './coding-experiences-data.service';
 
 describe('CodingExperiencesComponent', () => {
   let component: CodingExperiencesComponent;
@@ -17,5 +18,9 @@ describe('CodingExperiencesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('sets population data', () => {
+    expect(component.populationData).toEqual(populationData);
   });
 });

@@ -7,7 +7,7 @@ export class Population {
     "angular": number;
 }
 
-const populationData: Population[] = [
+export const populationData: Population[] = [
     {
         year: '2012',
         webDevelopment: 0,
