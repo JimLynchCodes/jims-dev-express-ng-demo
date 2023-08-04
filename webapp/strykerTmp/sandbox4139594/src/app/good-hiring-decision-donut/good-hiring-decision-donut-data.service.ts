@@ -51,10 +51,10 @@ export class PopulationByRegion {
 }
 const populationByRegions: PopulationByRegion[] = stryMutAct_9fa48("56") ? [] : (stryCov_9fa48("56"), [stryMutAct_9fa48("57") ? {} : (stryCov_9fa48("57"), {
   outcome: stryMutAct_9fa48("58") ? "" : (stryCov_9fa48("58"), 'Chance of hiring Jim being a great decision!'),
-  val: .999
+  val: .9999
 }), stryMutAct_9fa48("59") ? {} : (stryCov_9fa48("59"), {
   outcome: stryMutAct_9fa48("60") ? "" : (stryCov_9fa48("60"), 'Chance of hiring Jim not be a good choice...'),
-  val: 0.001
+  val: 0.0001
 })]);
 @Injectable()
 export class GoodHiringDecisionDataService {

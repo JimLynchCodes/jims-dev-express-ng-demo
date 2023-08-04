@@ -18,7 +18,4 @@ export class GoodHiringDecisionDonutComponent {
     this.populationByRegions = service.getPopulationByRegions();
   }
 
-  customizeTooltip = (arg: any) => ({
-    text: `${arg.valueText} - ${this.pipe.transform(arg.percent, '1.2-2')}`,
-  });
 }

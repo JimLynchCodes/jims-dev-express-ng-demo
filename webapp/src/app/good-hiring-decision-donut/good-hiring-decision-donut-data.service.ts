@@ -10,10 +10,10 @@ export class PopulationByRegion {
 
 const populationByRegions: PopulationByRegion[] = [{
   outcome: 'Chance of hiring Jim being a great decision!',
-  val: .999,
+  val: .99999,
 }, {
   outcome: 'Chance of hiring Jim not be a good choice...',
-  val: 0.001,
+  val: 0.00001,
 }];
 
 @Injectable()
