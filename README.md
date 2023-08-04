@@ -16,14 +16,29 @@ The live site for this codebase can be viewed here: https://stellular-quokka-e5b
 
 1) Run locally
 ```
-ng serve
+npm start
 ```
 
-2) Run Unit Test
+2) Build
 ```
-ng test
+npm run build
 ```
 
-3) Deploy
-(handled automatically by Netlify)
+3) Run Unit Tests
+```
+npm test
+```
+
+4) Run Unit Tests With Code Coverage
+```
+npm run test:cov
+```
+
+5) Run Unit Test Mutation Tests
+```
+npm run test:mutation
+```
+
+## Deploy
+(handled automatically by Netlify CI/CD)
 
