@@ -23,7 +23,7 @@ const config = {
   concurrency: 8,
   concurrency_comment:
     "Recommended to use about half of your available cores when running stryker with angular",
-  coverageAnalysis: "all",
+  coverageAnalysis: "perTest",
   disableTypeChecks: false,
   tempDirName: 'strykerTmp'
 };
