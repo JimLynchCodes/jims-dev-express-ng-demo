@@ -14,27 +14,27 @@ The live site for this codebase can be viewed here: https://stellular-quokka-e5b
 
 ## How To Run
 
-1) Run locally
+### Run locally
 ```
 npm start
 ```
 
-2) Build
+### Build
 ```
 npm run build
 ```
 
-3) Run Unit Tests
+### Run Unit Tests
 ```
 npm test
 ```
 
-4) Run Unit Tests With Code Coverage
+### Run Unit Tests With Code Coverage
 ```
 npm run test:cov
 ```
 
-5) Run Unit Test Mutation Tests
+### Run Unit Test Mutation Tests
 ```
 npm run test:mutation
 ```
