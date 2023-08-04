@@ -1,0 +1,17 @@
+<div id="chart-demo">
+  <dx-chart title="Jim's Coding Experiences Over Time" palette="Harmony Light" [dataSource]="populationData">
+    <dxi-series valueField="webDevelopment" name="Web Development"></dxi-series>
+    <dxi-series valueField="javascript" name="JavaScript / TypeScript"></dxi-series>
+    <dxi-series valueField="angular" name="Angular / AngularJS"></dxi-series>
+
+    <dxo-common-series-settings #commonSeries argumentField="year" [type]="types[0]">
+    </dxo-common-series-settings>
+    <dxo-margin [bottom]="20"></dxo-margin>
+    <dxi-value-axis title="Years of Experience"></dxi-value-axis>
+    <dxo-argument-axis [valueMarginsEnabled]="false"></dxo-argument-axis>
+    <dxo-export [enabled]="true"></dxo-export>
+    <dxo-legend verticalAlignment="bottom" horizontalAlignment="center">
+    </dxo-legend>
+  </dx-chart>
+
+</div>
