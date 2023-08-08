@@ -17,15 +17,15 @@ describe('FooterComponent', () => {
 
   it('displays the text "Made by Jim"', () => {
     const madeByJim = fixture.debugElement.query(By.css('p'))
-    expect(madeByJim.nativeNode.innerText.trim()).toBe('Made by Jim. ☕️');
+    expect(madeByJim.nativeNode.innerText.trim()).toBe('Made by Jim');
   });
 
-  it('displays "Jim" as a link to his github page', () => {
+  it('displays "Jim" as a link to his linktree page', () => {
 
     const link = fixture.debugElement.query(By.css('a'))
 
     expect(link.nativeNode.outerText).toEqual("Jim");
-    expect(link.nativeNode.href).toEqual("https://twitter.com/JimLynchCodes");
+    expect(link.nativeNode.href).toEqual("https://linktr.ee/jimlynchcodes");
   });
 
 });
